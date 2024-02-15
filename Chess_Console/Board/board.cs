@@ -18,5 +18,11 @@ namespace Board
         {
             return parts[lines, columns];
         }
+
+        public void placePart(Part p, Position pos)
+        {
+            parts[pos.line, pos.column] = p;
+            p.position = pos;
+        }
     }
 }

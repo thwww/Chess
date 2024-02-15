@@ -8,9 +8,9 @@ namespace Board
         public int amtmovements { get; protected set; }
         public board tab { get; protected set; }
 
-        public Part(Position position, board tab, Color color)
+        public Part(board tab, Color color)
         {
-            this.position = position;
+            this.position = null;
             this.tab = tab;
             this.color = color;
             this.amtmovements = 0;
