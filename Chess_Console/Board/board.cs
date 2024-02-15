@@ -13,5 +13,10 @@ namespace Board
             this.columns = columns; 
             parts = new Part[lines, columns];
         }
+
+        public Part part (int lines, int columns)
+        {
+            return parts[lines, columns];
+        }
     }
 }
