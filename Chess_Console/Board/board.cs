@@ -38,6 +38,22 @@ namespace Board
             p.position = pos;
         }
 
+        public Part removePart(Position pos)
+        {
+            if (part(pos) == null)
+            {
+                return null;
+            }
+            else
+            {
+                Part aux = part(pos);
+                aux.position = null;
+                parts[pos.line, pos.column] = null;
+                return aux;
+            }
+           
+        }
+
         public bool validPosition(Position pos)
         {
             if (pos.line<0 || pos.line>=lines || pos.column>=columns)
