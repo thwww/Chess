@@ -1,7 +1,7 @@
 ﻿
 namespace Board
 {
-    class Part
+    abstract class Part
     {
         public Position position { get; set; }
         public Color color { get; protected set; }
@@ -15,6 +15,8 @@ namespace Board
             this.color = color;
             this.amtmovements = 0;
         }
+
+        public abstract bool[,] possibleMovements();
 
         public void increaseAmtMovements() { 
             amtmovements++;
